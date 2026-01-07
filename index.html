@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Расторжение брака</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  #gorilla {
+    display: none; /* Скрываем картинку изначально */
+    max-width: 100%;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div id="message">Расторжение брака для подтверждения...</div>
+  <img id="gorilla" src="gorilla.png" alt="Горилла с факом">
+
+  <script>
+    // Показываем картинку через 3 секунды
+    setTimeout(() => {
+      document.getElementById('message').style.display = 'none'; // Скрываем текст
+      document.getElementById('gorilla').style.display = 'block'; // Показываем картинку
+    }, 3000); // 3000 миллисекунд = 3 секунды
+  </script>
+</body>
+</html>
